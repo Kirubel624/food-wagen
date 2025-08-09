@@ -20,7 +20,7 @@ const FeaturedMeals = () => {
   return (
     <div className="w-full text-center flex flex-col items-center justify-center">
       <span className="text-2xl mt-10 font-[700] ">Featured Meals</span>
-      <div className="w-full overflow-y-auto flex flex-row self-center items-center justify-center pt-10  gap-4 p-4">
+      <div className="w-full overflow-y-auto flex flex-wrap self-center items-center justify-center pt-10  gap-4 p-4">
         {featuredFoods.length === 0 ? (
           <p>No featured meals available</p>
         ) : (

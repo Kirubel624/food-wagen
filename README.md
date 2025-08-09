@@ -86,7 +86,6 @@ Base URL: `/api/v1`
 
 ## Bonus Features
 
-- **State Management:** React hooks for local state; ready for Redux integration
 - **Validation:** All forms have required field validation
 - **Responsiveness:** Fully responsive design for desktop and mobile
 - **UI/UX:** Ant Design modals, popovers, and feedback messages
