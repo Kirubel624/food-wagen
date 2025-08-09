@@ -65,7 +65,9 @@ export default function FoodCard(props) {
             )}
           </div>
           <div>
-            <p className="text-gray-800 font-semibold truncate">{foodName}</p>
+            <p className="text-gray-800 font-semibold truncate">
+              {restaurantName}
+            </p>
             <div className="flex items-center gap-1 text-yellow-500 font-semibold">
               <FaStar />
               <span>{foodRating}</span>
@@ -102,8 +104,9 @@ export default function FoodCard(props) {
           <EditMealModal
             visible={editOpen}
             onClose={() => setEditOpen(false)}
-            onSuccess={props.onChange}
+            onSuccess={getFoodsData}
             food={props}
+            getFoodsData={getFoodsData}
           />
           <DeleteMealModal
             visible={deleteOpen}
