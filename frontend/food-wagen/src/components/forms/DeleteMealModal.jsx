@@ -10,13 +10,16 @@ const DeleteMealModal = ({ visible, onClose, onDelete, food }) => {
       okText="Delete"
       okButtonProps={{ danger: true }}
       cancelText="Cancel"
-      destroyOnClose
+      destroyOnHidden
     >
       <div className="text-center">
-        <h2 className="text-lg font-bold mb-2 text-red-600">Delete Meal</h2>
+        <h1 className="text-2xl pb-4 text-center font-[700] text-[#FF9A0E]">
+          Delete Meal
+        </h1>
         <p>
           Are you sure you want to delete{" "}
-          <span className="font-semibold">{food?.foodName}</span>?
+          <span className="font-semibold">{food?.foodName}</span>? Actions
+          cannot be reversed.
         </p>
       </div>
     </Modal>

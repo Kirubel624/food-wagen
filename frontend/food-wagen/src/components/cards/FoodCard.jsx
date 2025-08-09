@@ -15,6 +15,7 @@ export default function FoodCard(props) {
     restaurantName,
     restaurantImage,
     restaurantStatus,
+    getFoodsData,
   } = props;
   const [editOpen, setEditOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function FoodCard(props) {
       message.success("Meal deleted successfully");
       setDeleteOpen(false);
       // Optionally trigger a refresh in parent
-      if (props.onChange) props.onChange();
+      if (getFoodsData) getFoodsData();
     } catch (err) {
       message.error("Failed to delete meal");
     } finally {

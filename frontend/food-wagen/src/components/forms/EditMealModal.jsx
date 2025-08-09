@@ -7,16 +7,7 @@ const { Option } = Select;
 const EditMealModal = ({ visible, onClose, onSuccess, food }) => {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
-
-  React.useEffect(() => {
-    if (food) {
-      form.setFieldsValue({
-        ...food,
-        foodRating: Number(food.foodRating),
-        foodPrice: food.foodPrice ? Number(food.foodPrice) : undefined,
-      });
-    }
-  }, [food, form]);
+  console.log(food, "fodoodododo");
 
   const handleEdit = async (data) => {
     try {
@@ -43,7 +34,7 @@ const EditMealModal = ({ visible, onClose, onSuccess, food }) => {
       onCancel={onClose}
       confirmLoading={loading}
       footer={null}
-      destroyOnClose
+      destroyOnHidden
     >
       <h1 className="text-2xl pb-4 text-center font-[700] text-[#FF9A0E]">
         Edit Meal
@@ -54,6 +45,15 @@ const EditMealModal = ({ visible, onClose, onSuccess, food }) => {
         onFinish={handleEdit}
         layout="vertical"
         preserve={false}
+        initialValues={
+          food
+            ? {
+                ...food,
+                foodRating: Number(food.foodRating),
+                foodPrice: food.foodPrice ? Number(food.foodPrice) : undefined,
+              }
+            : {}
+        }
       >
         <Form.Item
           name="foodName"

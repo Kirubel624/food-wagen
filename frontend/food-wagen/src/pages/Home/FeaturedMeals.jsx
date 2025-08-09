@@ -24,11 +24,12 @@ const FeaturedMeals = () => {
         {featuredFoods.length === 0 ? (
           <p>No featured meals available</p>
         ) : (
-          featuredFoods.map((food) => <FoodCard {...food} />)
+          featuredFoods.map((food) => (
+            <FoodCard {...food} getFoodsData={getFoodsData} />
+          ))
         )}
       </div>
-      {featuredFoods.length === 0 &&
-        featuredFoods.map((food) => <FoodCard {...food} />)}
+
       <Button className="my-10 flex items-center justify-center">
         Load More
         <MdOutlineKeyboardArrowRight className="ml-2" />
