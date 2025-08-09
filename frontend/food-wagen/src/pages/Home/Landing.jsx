@@ -7,7 +7,7 @@ export default function FoodSearchBanner() {
 
   return (
     <div className="relative w-full min-h-[400px] pt-10 flex  justify-center bg-[#FFB30E] px-6">
-      <div className="max-w-5xl w-full flex flex-col  md:flex-row items-end  justify-between gap-8">
+      <div className="max-w-5xl w-full flex flex-col  md:flex-row md:items-end items-center  justify-between gap-8">
         <div className="flex-1 text-center self-center md:text-left">
           <h1 className="text-white text-5xl font-bold mb-2">
             Are you <span className="text-white">starving?</span>
@@ -61,7 +61,7 @@ export default function FoodSearchBanner() {
           <img
             src={LandingImage}
             alt="Overlay"
-            className="h-72 self-end object-cover "
+            className="h-72 self-end  object-cover "
           />
         </div>
       </div>
