@@ -6,7 +6,7 @@ const DeleteMealModal = ({ visible, onClose, onDelete, food }) => {
     <Modal
       open={visible}
       onCancel={onClose}
-      onOk={() => onDelete(food?.id)}
+      onOk={onDelete}
       okText="Delete"
       okButtonProps={{ danger: true }}
       cancelText="Cancel"

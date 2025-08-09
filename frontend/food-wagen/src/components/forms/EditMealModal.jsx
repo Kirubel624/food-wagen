@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Modal, Form, Input, Select, message, Rate, InputNumber } from "antd";
 import { updateFood } from "../../services/foodService";
 
@@ -8,7 +8,7 @@ const EditMealModal = ({ visible, onClose, onSuccess, food }) => {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (food) {
       form.setFieldsValue({
         ...food,
@@ -43,7 +43,7 @@ const EditMealModal = ({ visible, onClose, onSuccess, food }) => {
       onCancel={onClose}
       confirmLoading={loading}
       footer={null}
-      destroyOnHidden
+      destroyOnClose
     >
       <h1 className="text-2xl pb-4 text-center font-[700] text-[#FF9A0E]">
         Edit Meal
@@ -84,7 +84,6 @@ const EditMealModal = ({ visible, onClose, onSuccess, food }) => {
             <Rate allowHalf />
           </Form.Item>
         </div>
-
         <Form.Item
           name="foodImage"
           label="Food Image URL"

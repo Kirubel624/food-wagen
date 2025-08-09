@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { FaMotorcycle, FaLock, FaSearch } from "react-icons/fa";
-
+import Button from "../../components/ui/button";
+import LandingImage from "../../assets/food.png";
 export default function FoodSearchBanner() {
   const [deliveryType, setDeliveryType] = useState("delivery");
 
   return (
-    <div className="relative w-full min-h-[400px] flex items-center justify-center bg-yellow-500 px-6">
-      <div className="max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="flex-1 text-center md:text-left">
+    <div className="relative w-full min-h-[400px] pt-10 flex  justify-center bg-[#FFB30E] px-6">
+      <div className="max-w-5xl w-full flex flex-col  md:flex-row items-end  justify-between gap-8">
+        <div className="flex-1 text-center self-center md:text-left">
           <h1 className="text-white text-5xl font-bold mb-2">
             Are you <span className="text-white">starving?</span>
           </h1>
@@ -48,21 +49,20 @@ export default function FoodSearchBanner() {
                   className="bg-transparent w-full py-2 px-2 text-gray-700 focus:outline-none"
                 />
               </div>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-md">
+              <Button className="flex items-center gap-2" variant="orange">
+                <FaSearch />
                 Find Meal
-              </button>
+              </Button>
             </div>
           </div>
         </div>
 
-        <div className="flex-1 flex justify-center">
-          <div className="w-72 h-72 bg-gray-300 rounded-full flex items-center justify-center">
-            <img
-              src="./Overlay.png"
-              alt="Overlay"
-              className="w-full h-full object-cover rounded-full"
-            />
-          </div>
+        <div className="">
+          <img
+            src={LandingImage}
+            alt="Overlay"
+            className="h-72 self-end object-cover "
+          />
         </div>
       </div>
     </div>
