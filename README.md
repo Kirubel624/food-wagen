@@ -1,12 +1,13 @@
-
 # Food Wagen — Eskalate Full Stack Assessment
 
 ## Path Chosen
+
 **Path A: Food Delivery Platform**
 
 ---
 
 ## Project Structure
+
 - **Backend:** `/backend` (Node.js, Express, Sequelize, PostgreSQL)
 - **Frontend:** `/frontend/food-wagen` (React, Vite, Ant Design, TailwindCSS)
 
@@ -15,6 +16,7 @@
 ## Setup Instructions
 
 ### Backend
+
 1. **Install dependencies:**
    ```sh
    cd backend
@@ -33,6 +35,7 @@
    The backend runs on `http://localhost:5000` by default.
 
 ### Frontend
+
 1. **Install dependencies:**
    ```sh
    cd frontend/food-wagen
@@ -51,6 +54,7 @@
 Base URL: `/api/v1`
 
 ### Foods
+
 - `GET /foods` — List all foods
 - `GET /foods?foodName=Pizza` — Search foods by name
 - `POST /foods` — Create a new food
@@ -60,6 +64,7 @@ Base URL: `/api/v1`
 - `DELETE /foods/:id` — Delete a food
 
 ### Restaurants
+
 - `GET /restaurants` — List all restaurants
 - `POST /restaurants` — Create a new restaurant
 - `PUT /restaurants/:id` — Update a restaurant
@@ -68,6 +73,7 @@ Base URL: `/api/v1`
 ---
 
 ## Frontend Features Implemented
+
 - Modern responsive UI with React, Vite, TailwindCSS, and Ant Design
 - List, add, edit, and delete meals (foods)
 - Modal forms for adding and editing meals (with validation)
@@ -79,6 +85,7 @@ Base URL: `/api/v1`
 ---
 
 ## Bonus Features
+
 - **State Management:** React hooks for local state; ready for Redux integration
 - **Validation:** All forms have required field validation
 - **Responsiveness:** Fully responsive design for desktop and mobile
@@ -88,6 +95,7 @@ Base URL: `/api/v1`
 ---
 
 ## Notes
+
 - Make sure PostgreSQL is running and accessible with the credentials in your `.env` file.
 - For any issues, check the backend and frontend console for errors.
 
